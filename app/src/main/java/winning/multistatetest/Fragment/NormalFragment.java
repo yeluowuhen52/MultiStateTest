@@ -14,8 +14,15 @@ public class NormalFragment extends BaseFragment {
     @Override
     protected View initView() {
         View view = View.inflate(getActivity(), R.layout.normal_main, null);
-        Button btn = (Button) view.findViewById(R.id.btn_start);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn_suc = (Button) view.findViewById(R.id.btn_start_success);
+        btn_suc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initFragment(3);
+            }
+        });
+        Button btn_fail = (Button) view.findViewById(R.id.btn_start_failed);
+        btn_fail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 initFragment(2);

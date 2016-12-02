@@ -12,17 +12,35 @@
         android:orientation="vertical"
         tools:context="winning.multistatetest.MainActivity">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="主页面!"/>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_start"
+                android:id="@+id/btn_start_success"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="访问网络"/>
+                android:text="成功访问网络"/>
+
+            <Button
+                android:id="@+id/btn_start_failed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="访问网络失败"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import winning.multistatetest.Fragment.FailedFragment;
 import winning.multistatetest.Fragment.NormalFragment;
+import winning.multistatetest.Fragment.SuccessFragment;
 import winning.multistatetest.R;
 
 /**
@@ -45,10 +46,12 @@ public abstract class BaseFragment extends Fragment {
     public void initFragment(int flag) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        if(flag == 1){
+        if (flag == 1) {
             fragmentTransaction.replace(R.id.fl_layout, new NormalFragment(), "normal");
-        } else if(flag == 2){
-            fragmentTransaction.replace(R.id.fl_layout, new FailedFragment(), "normal");
+        } else if (flag == 2) {
+            fragmentTransaction.replace(R.id.fl_layout, new FailedFragment(), "failed");
+        } else if (flag == 3) {
+            fragmentTransaction.replace(R.id.fl_layout, new SuccessFragment(), "success");
         }
         fragmentTransaction.commit();
     }
